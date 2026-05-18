@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Mohamed Madkour | Data Analyst</title>
+<meta name="description" content="Mohamed Madkour Portfolio - Data Analyst skilled in Python, SQL, Power BI, and Data Visualization">
 
 <link rel="stylesheet" href="css/style.css" />
 
@@ -11,14 +13,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Icons -->
-<script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+<!-- (FontAwesome removed until real kit is added) -->
+
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
   <h2 class="logo">Madkour<span>.</span></h2>
+
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -26,7 +30,8 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button onclick="toggleTheme()" class="theme-btn">Toggle</button>
+
+  <button onclick="toggleTheme()" class="theme-btn">Toggle Theme</button>
 </header>
 
 <!-- HERO -->
@@ -48,13 +53,14 @@
   <h2>About Me</h2>
   <div class="card glass">
     Aspiring Data Analyst skilled in Python, SQL, Excel, and Power BI.
-    Passionate about building dashboards and analyzing real-world data to drive business decisions.
+    Passionate about building dashboards and analyzing real-world data.
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
   <h2>Skills</h2>
+
   <div class="skills-grid">
     <div class="skill">Python</div>
     <div class="skill">SQL</div>
@@ -72,22 +78,22 @@
   <div class="projects-grid">
 
     <div class="project-card glass">
-      <img src="assets/project1.jpg" />
+      <img src="assets/project1.jpg" alt="Project 1" />
       <h3>Remote Work Dashboard</h3>
       <p>Power BI analysis of productivity trends.</p>
       <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
       </div>
     </div>
 
     <div class="project-card glass">
-      <img src="assets/project2.jpg" />
+      <img src="assets/project2.jpg" alt="Project 2" />
       <h3>Food Sales Analysis</h3>
       <p>Python-based sales insights & KPIs.</p>
       <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
       </div>
     </div>
 
@@ -97,20 +103,46 @@
 <!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
+
   <div class="card glass">
-    <input type="text" id="name" placeholder="Your Name" />
-    <input type="email" id="email" placeholder="Your Email" />
-    <textarea id="message" placeholder="Your Message"></textarea>
-    <button onclick="sendMessage()" class="btn">Send</button>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
 
     <div class="socials">
       <a href="mailto:madkourmohamed88@gmail.com">Email</a>
-      <a href="https://github.com">GitHub</a>
-      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
     </div>
   </div>
 </section>
 
+<!-- SCRIPT -->
 <script src="js/script.js"></script>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+function sendMessage(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  if(name && email && message){
+    alert("Message sent successfully!");
+  } else {
+    alert("Please fill all fields.");
+  }
+}
+</script>
+
 </body>
 </html>
