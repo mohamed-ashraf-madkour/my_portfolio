@@ -1,165 +1,425 @@
-/*************************************************
- FILE: index.html (Upgraded Portfolio Version)
-*************************************************/
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Mohamed Madkour - Flutter Developer Portfolio" />
-<title>Madkour | Portfolio</title>
-
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madkour's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
+    <main>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">MADKOUR</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
 
-<!-- Scroll To Top Button -->
-<button id="scrollTop" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="gradient-text">Mohamed Madkour</span>
+                        </h1>
+                        <h2 class="hero-subtitle">Flutter Developer</h2>
+                        <p class="hero-description">
+                            I’m a Junior Flutter Developer who really enjoys building mobile apps using Flutter and
+                            Firebase.
+                            My goal is to build apps that are fast, easy to use, and reliable, and I keep learning new
+                            things with every project.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-container">
+                            <div class="profile-image">
+                                <img src="../profile.jpg" alt="Profile Picture" class="profile-img">
+                                <div class="profile-ring"></div>
+                                <div class="profile-ring-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <a href="#about" class="scroll-arrow"></a>
+                </div>
+        </section>
 
-<!-- NAVBAR -->
-<header class="navbar">
-<div class="nav-container">
-<div class="logo">MADKOUR</div>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Passionate about technology and continuous learning</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-description">
+                            I have good experience with Cubit/BLoC for state management and working with REST APIs.
+                            I always try to create clean, smooth, and responsive UIs that work well on any device.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Computer Science Student</h4>
+                                    <p>Currently pursuing my degree with focus on software engineering and AI</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <h4>Information Technology Institute Trainee</h4>
+                                    <p>Completed a 120-hour summer training at the Information Technology Institute
+                                        (ITI)</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h4>Huma Volve</h4>
+                                    <p>Huma Volve Flutter Training Program (176 hours)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-profile">
+                            <img src="../profile.jpg" alt="About Me" class="about-img">
+                            <div class="about-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Certification</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">My technical expertise across different domains</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-mobile"></i>
+                            <h3>Mobile Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Flutter</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Dart</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Animations</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Widgets</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="hamburger" id="hamburger">
-<i class="fas fa-bars"></i>
-</div>
-</div>
-</header>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-list"></i>
+                            <h3>State Management & APIs</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Cubit</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Firebase</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">BLoC</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">REST</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- HERO -->
-<section id="home" class="hero">
-<div class="hero-content">
-<h1>Hi, I'm <span class="gradient">Mohamed Madkour</span></h1>
-<h2>Flutter Developer</h2>
-<p>I build modern, fast, and scalable mobile apps using Flutter & Firebase.</p>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases & Storage</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Hive</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">SharedPreferences</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">sqflite</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Flutter Secure Storage</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="hero-buttons">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="#contact" class="btn secondary">Contact Me</a>
-</div>
-</div>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Some of my recent work and learning projects</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="../first.jpg" alt="Fruit Hub" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.linkedin.com/posts/mohamed-madkour88_im-excited-to-tell-you-about-my-latest-project-activity-7343679462607118336-I6j6?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFTL6_sBxdqEG22LltaO19mu1IsWgK-jTSM&utm_campaign=copy_link"
+                                        class="project-link" target="_blank" rel="noopener noreferrer"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/MohamedAshrafMadkour/fruit_app" class="project-link"
+                                        target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Fruit Hub</h3>
+                            <p class="project-description">
+                                An e-commerce mobile app built with Flutter for buying fresh fruits online. Features
+                                secure login (Email, Phone OTP, Google, Facebook), real-time product updates, shopping
+                                cart and PayPal payments.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Cubit</span>
+                                <span class="tech-tag">PayPal API</span>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="hero-image">
-<img src="images/me.jpg" alt="profile" />
-</div>
-</section>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="../second.webp" alt="Football App" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.linkedin.com/posts/mohamed-madkour88_im-excited-to-tell-you-about-my-latest-project-activity-7324434932443877394-TQzO?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFTL6_sBxdqEG22LltaO19mu1IsWgK-jTSM&utm_campaign=copy_link"
+                                        class="project-link" target="_blank" rel="noopener noreferrer"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/MohamedAshrafMadkour/football_app" class="project-link"
+                                        target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Football Application</h3>
+                            <p class="project-description">
+                                A feature-rich football application providing the latest news, live match updates,
+                                player search, and detailed match statistics. Designed with smooth navigation,
+                                responsive UI, and persistent state handling for optimal user experience.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">REST</span>
+                                <span class="tech-tag">Shimmer</span>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-<h2 class="title">About Me</h2>
-<p class="subtitle">Aspiring Flutter Developer & Problem Solver</p>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="../third.jpg" alt="StreamView" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://www.linkedin.com/posts/mohamed-madkour88_im-excited-to-tell-you-about-my-latest-project-activity-7349138852076294144-YhC1?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAFTL6_sBxdqEG22LltaO19mu1IsWgK-jTSM&utm_campaign=whatsapp"
+                                        class="project-link" target="_blank" rel="noopener noreferrer"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/MohamedAshrafMadkour/Movie_app" class="project-link"
+                                        target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">StreamView</h3>
+                            <p class="project-description">
+                                A full-featured Flutter application for browsing movies, watching trailers, reading
+                                reviews, and exploring cast & watch providers, all with a modern and smooth UI.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="card">
-<p>
-I am passionate about building clean UI and scalable apps using Flutter.
-I work with Cubit/BLoC, Firebase, REST APIs, and modern architecture patterns.
-</p>
-</div>
-</section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">I'm always open to discussing new opportunities and collaborations</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:madkourmohamed88@gmail.com" class="cc">My Email</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/mohamed-madkour88/" class="cc">My LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/MohamedAshrafMadkour" class="cc">My Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="from_email" name="from_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-<h2 class="title">Skills</h2>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mohamed Madkour. All rights reserved.</p>
+                <div class="social-links">
+                    <!-- <a href="mailto:hippo5.elhabian@gmail.com" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fas fa-envelope"></i></a> -->
+                    <a href="https://www.linkedin.com/in/mohamed-madkour88/" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/MohamedAshrafMadkour" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/201286884837" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<div class="skills-grid">
-<div class="skill-card"><i class="fas fa-mobile"></i> Flutter</div>
-<div class="skill-card"><i class="fas fa-code"></i> Dart</div>
-<div class="skill-card"><i class="fas fa-fire"></i> Firebase</div>
-<div class="skill-card"><i class="fas fa-database"></i> APIs</div>
-<div class="skill-card"><i class="fas fa-layer-group"></i> BLoC / Cubit</div>
-<div class="skill-card"><i class="fab fa-github"></i> GitHub</div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-<h2 class="title">Projects</h2>
-
-<div class="projects-grid">
-
-<!-- Project 1 -->
-<div class="project-card">
-<img src="images/first.jpg" alt="project">
-<h3>Fruit Hub App</h3>
-<p>E-commerce Flutter app with authentication & payments.</p>
-
-<div class="links">
-<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
-<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-</div>
-
-<!-- Project 2 -->
-<div class="project-card">
-<img src="images/second.jpg" alt="project">
-<h3>Football App</h3>
-<p>Live football stats & news application.</p>
-
-<div class="links">
-<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
-<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-</div>
-
-<!-- Project 3 -->
-<div class="project-card">
-<img src="images/third.jpg" alt="project">
-<h3>Movie App</h3>
-<p>Movies browsing app with trailers and reviews.</p>
-
-<div class="links">
-<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
-<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-<h2 class="title">Contact Me</h2>
-
-<div class="contact-container">
-<form id="contact-form">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn primary">Send Message</button>
-</form>
-
-<div class="contact-info">
-<p><i class="fas fa-envelope"></i> madkourmohamed88@gmail.com</p>
-<p><i class="fab fa-linkedin"></i> LinkedIn</p>
-<p><i class="fab fa-github"></i> GitHub</p>
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<p>© 2026 Mohamed Madkour | All Rights Reserved</p>
-</footer>
-
-<!-- JS -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
