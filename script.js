@@ -1,42 +1,20 @@
-function toggleTheme(){
-  document.body.classList.toggle('light');
-}
+// Smooth scroll للـ navbar
+document.querySelectorAll('nav a').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
 
-// Typing effect
-const text = ["Data Analyst","Power BI Developer","Python Analyst"];
-let i=0, j=0, current="", isDeleting=false;
+const target = document.querySelector(this.getAttribute('href'));
 
-function type(){
-  current = text[i];
-  if(isDeleting){
-    j--;
-  }else{
-    j++;
-  }
+target.scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
 
-  document.getElementById("typing").innerHTML = current.substring(0,j);
 
-  if(!isDeleting && j===current.length){
-    isDeleting=true;
-    setTimeout(type,1000);
-    return;
-  }
+// SESSION STORAGE (مرة واحدة فقط)
+if (!sessionStorage.getItem("visited")) {
+alert("Welcome to my Data Analyst Portfolio 🚀");
 
-  if(isDeleting && j===0){
-    isDeleting=false;
-    i=(i+1)%text.length;
-  }
-
-  setTimeout(type,120);
-}
-
-type();
-
-// Contact
-function sendMessage(){
-  const name=document.getElementById("name").value;
-  const email=document.getElementById("email").value;
-  const msg=document.getElementById("message").value;
-
-  window.location.href=`mailto:madkourmohamed88@gmail.com?subject=Portfolio&body=${msg} (${email})`;
+sessionStorage.setItem("visited", "true");
 }
