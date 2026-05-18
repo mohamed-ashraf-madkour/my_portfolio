@@ -1,95 +1,73 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background:#0a0f1c;
-  color:#fff;
-  overflow-x:hidden;
+body {
+background: #0f172a;
+color: white;
 }
 
-/* NAVBAR */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 8%;
-  position:fixed;
-  width:100%;
-  background:rgba(0,0,0,0.3);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+/* HEADER */
+header {
+display: flex;
+justify-content: space-between;
+padding: 20px 60px;
+background: #111827;
+position: fixed;
+width: 100%;
+top: 0;
 }
 
-.nav-links{
-  display:flex;
-  gap:20px;
-  list-style:none;
+nav a {
+color: white;
+margin-left: 20px;
+text-decoration: none;
 }
 
-.nav-links a{
-  color:white;
-  text-decoration:none;
+nav a:hover {
+color: #38bdf8;
 }
 
-.logo span{color:#00e5ff;}
+/* SECTIONS */
+section {
+padding: 120px 60px;
+}
 
 /* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:radial-gradient(circle,#0f172a,#000);
+.hero {
+display: flex;
+align-items: center;
+height: 100vh;
 }
 
-.hero h1 span{color:#00e5ff;}
-
-.btn{
-  padding:10px 20px;
-  background:#00e5ff;
-  color:black;
-  border:none;
-  border-radius:8px;
-  margin:10px;
-  display:inline-block;
+.hero-text h2 {
+font-size: 40px;
+color: #38bdf8;
 }
 
-.btn.outline{
-  background:transparent;
-  border:1px solid #00e5ff;
-  color:#00e5ff;
+/* BUTTON */
+.btn {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background: #38bdf8;
+color: black;
+border-radius: 8px;
+text-decoration: none;
 }
 
-.section{
-  padding:100px 8%;
+/* GRID */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
 }
 
-.glass{
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  padding:20px;
-  border-radius:15px;
-}
-
-.skills-grid,
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-}
-
-.project-card img{
-  width:100%;
-  border-radius:10px;
-}
-
-.skill{
-  padding:15px;
-  background:rgba(255,255,255,0.05);
-  border-radius:10px;
-  text-align:center;
+.grid div {
+background: #1e293b;
+padding: 20px;
+border-radius: 10px;
 }
