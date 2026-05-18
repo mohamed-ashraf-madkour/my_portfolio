@@ -1,148 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mohamed Madkour | Data Analyst</title>
-<meta name="description" content="Mohamed Madkour Portfolio - Data Analyst skilled in Python, SQL, Power BI, and Data Visualization">
+<title>Data Analyst Portfolio</title>
 
-<link rel="stylesheet" href="css/style.css" />
+<!-- CSS file -->
+<link rel="stylesheet" href="style.css">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- (FontAwesome removed until real kit is added) -->
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <h2 class="logo">Madkour<span>.</span></h2>
+<header>
+<h1>Mohamed Madkour</h1>
 
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <button onclick="toggleTheme()" class="theme-btn">Toggle Theme</button>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<!-- HERO -->
+<!-- HOME -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Hi, I'm <span>Mohamed Madkour</span></h1>
-    <h3><span id="typing"></span></h3>
-    <p>Turning Data into Decisions & Insights</p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn outline">Contact Me</a>
-    </div>
-  </div>
+<div class="hero-text">
+<h2>Data Analyst</h2>
+<p>I turn data into insights using SQL, Python, Excel and BI tools.</p>
+<a href="#projects" class="btn">View Projects</a>
+</div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <div class="card glass">
-    Aspiring Data Analyst skilled in Python, SQL, Excel, and Power BI.
-    Passionate about building dashboards and analyzing real-world data.
-  </div>
+<section id="about">
+<h2>About Me</h2>
+<p>I am a Data Analyst passionate about insights and dashboards.</p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Skills</h2>
-
-  <div class="skills-grid">
-    <div class="skill">Python</div>
-    <div class="skill">SQL</div>
-    <div class="skill">Power BI</div>
-    <div class="skill">Excel</div>
-    <div class="skill">Pandas</div>
-    <div class="skill">NumPy</div>
-  </div>
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div>SQL</div>
+<div>Python</div>
+<div>Excel</div>
+<div>Power BI</div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="project-card glass">
-      <img src="assets/project1.jpg" alt="Project 1" />
-      <h3>Remote Work Dashboard</h3>
-      <p>Power BI analysis of productivity trends.</p>
-      <div class="links">
-        <a href="https://github.com/">GitHub</a>
-        <a href="https://linkedin.com/">LinkedIn</a>
-      </div>
-    </div>
-
-    <div class="project-card glass">
-      <img src="assets/project2.jpg" alt="Project 2" />
-      <h3>Food Sales Analysis</h3>
-      <p>Python-based sales insights & KPIs.</p>
-      <div class="links">
-        <a href="https://github.com/">GitHub</a>
-        <a href="https://linkedin.com/">LinkedIn</a>
-      </div>
-    </div>
-
-  </div>
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div>Sales Dashboard</div>
+<div>Customer Analysis</div>
+<div>Data Cleaning</div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-
-  <div class="card glass">
-    <form onsubmit="sendMessage(event)">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit" class="btn">Send</button>
-    </form>
-
-    <div class="socials">
-      <a href="mailto:madkourmohamed88@gmail.com">Email</a>
-      <a href="https://github.com/">GitHub</a>
-      <a href="https://linkedin.com/">LinkedIn</a>
-    </div>
-  </div>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: example@email.com</p>
 </section>
 
-<!-- SCRIPT -->
-<script src="js/script.js"></script>
-
-<script>
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-}
-
-function sendMessage(e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-
-  if(name && email && message){
-    alert("Message sent successfully!");
-  } else {
-    alert("Please fill all fields.");
-  }
-}
-</script>
+<!-- JS file -->
+<script src="script.js"></script>
 
 </body>
 </html>
