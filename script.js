@@ -1,29 +1,42 @@
-### ⚙️ js/script.js
-```javascript
-function setTheme(mode){
-  document.body.classList.toggle('light', mode==='light');
-  localStorage.setItem('theme', mode);
-}
-
 function toggleTheme(){
-  const isLight = document.body.classList.contains('light');
-  setTheme(isLight ? 'dark' : 'light');
+  document.body.classList.toggle('light');
 }
 
-(function(){
-  const saved = localStorage.getItem('theme') || 'dark';
-  setTheme(saved);
-})();
+// Typing effect
+const text = ["Data Analyst","Power BI Developer","Python Analyst"];
+let i=0, j=0, current="", isDeleting=false;
 
-function sendMessage(){
-  const name=document.getElementById('name').value;
-  const email=document.getElementById('email').value;
-  const msg=document.getElementById('message').value;
+function type(){
+  current = text[i];
+  if(isDeleting){
+    j--;
+  }else{
+    j++;
+  }
 
-  if(!name||!email||!msg){
-    alert('Fill all fields');
+  document.getElementById("typing").innerHTML = current.substring(0,j);
+
+  if(!isDeleting && j===current.length){
+    isDeleting=true;
+    setTimeout(type,1000);
     return;
   }
 
-  window.location.href = `mailto:madkourmohamed88@gmail.com?subject=Portfolio from ${name}&body=${msg} (${email})`;
+  if(isDeleting && j===0){
+    isDeleting=false;
+    i=(i+1)%text.length;
+  }
+
+  setTimeout(type,120);
+}
+
+type();
+
+// Contact
+function sendMessage(){
+  const name=document.getElementById("name").value;
+  const email=document.getElementById("email").value;
+  const msg=document.getElementById("message").value;
+
+  window.location.href=`mailto:madkourmohamed88@gmail.com?subject=Portfolio&body=${msg} (${email})`;
 }
