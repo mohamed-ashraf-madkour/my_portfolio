@@ -1,0 +1,176 @@
+### 📁 index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohamed Madkour - Portfolio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Mohamed Madkour</h1>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+</header>
+
+<section class="hero">
+  <h2>Data Analyst</h2>
+  <p>Tanta, Egypt</p>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    Aspiring Data Analyst skilled in Python, SQL, Excel, Power BI.
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Python</div>
+    <div class="card">SQL</div>
+    <div class="card">Excel</div>
+    <div class="card">Power BI</div>
+    <div class="card">Pandas</div>
+    <div class="card">NumPy</div>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Remote Work Dashboard</h3>
+    <img src="YOUR_IMAGE_URL" />
+    <p>Power BI dashboard analyzing productivity trends.</p>
+    <a href="YOUR_GITHUB_LINK">GitHub</a> |
+    <a href="YOUR_LINKEDIN_POST">LinkedIn</a>
+  </div>
+
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    Tanta University - Computer Science (2027)
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <input id="name" placeholder="Name" />
+    <input id="email" placeholder="Email" />
+    <textarea id="message" placeholder="Message"></textarea>
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+```
+
+---
+
+### 🎨 css/style.css
+```css
+:root{
+  --bg:#0f172a;
+  --text:#f8fafc;
+  --card:#1e293b;
+  --accent:#38bdf8;
+}
+
+body.light{
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --card:#e2e8f0;
+  --accent:#2563eb;
+}
+
+body{
+  margin:0;
+  font-family:Arial;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:var(--card);
+}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+section{
+  padding:40px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+}
+
+a{
+  color:var(--accent);
+}
+```
+
+---
+
+### ⚙️ js/script.js
+```javascript
+function setTheme(mode){
+  document.body.classList.toggle('light', mode==='light');
+  localStorage.setItem('theme', mode);
+}
+
+function toggleTheme(){
+  const isLight = document.body.classList.contains('light');
+  setTheme(isLight ? 'dark' : 'light');
+}
+
+(function(){
+  const saved = localStorage.getItem('theme') || 'dark';
+  setTheme(saved);
+})();
+
+function sendMessage(){
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const msg=document.getElementById('message').value;
+
+  if(!name||!email||!msg){
+    alert('Fill all fields');
+    return;
+  }
+
+  window.location.href = `mailto:madkourmohamed88@gmail.com?subject=Portfolio from ${name}&body=${msg} (${email})`;
+}
