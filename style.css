@@ -1,0 +1,63 @@
+:root{
+  --bg:#0f172a;
+  --text:#f8fafc;
+  --card:#1e293b;
+  --accent:#38bdf8;
+}
+
+body.light{
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --card:#e2e8f0;
+  --accent:#2563eb;
+}
+
+body{
+  margin:0;
+  font-family:Arial;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:var(--card);
+}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+section{
+  padding:40px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+}
+
+a{
+  color:var(--accent);
+}
