@@ -1,65 +1,133 @@
+/*************************************************
+ FILE: index.html (Upgraded Portfolio Version)
+*************************************************/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Mohamed Madkour - Flutter Developer Portfolio" />
+<title>Madkour | Portfolio</title>
 
-<title>Data Analyst Portfolio</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
 
-<header>
-<h1>Mohamed Madkour</h1>
+<!-- Scroll To Top Button -->
+<button id="scrollTop" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">MADKOUR</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="hamburger" id="hamburger">
+<i class="fas fa-bars"></i>
+</div>
+</div>
 </header>
 
-<!-- HOME -->
+<!-- HERO -->
 <section id="home" class="hero">
+<div class="hero-content">
+<h1>Hi, I'm <span class="gradient">Mohamed Madkour</span></h1>
+<h2>Flutter Developer</h2>
+<p>I build modern, fast, and scalable mobile apps using Flutter & Firebase.</p>
 
-<div class="hero-text">
-<h2>Data Analyst</h2>
-<p>I turn raw data into insights using SQL, Python, Excel & BI tools.</p>
-<a href="#projects" class="btn">View Projects</a>
+<div class="hero-buttons">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+</div>
 </div>
 
-<img src="images/me.jpg" class="profile-img" alt="My Photo">
+<div class="hero-image">
+<img src="images/me.jpg" alt="profile" />
+</div>
+</section>
 
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2 class="title">About Me</h2>
+<p class="subtitle">Aspiring Flutter Developer & Problem Solver</p>
+
+<div class="card">
+<p>
+I am passionate about building clean UI and scalable apps using Flutter.
+I work with Cubit/BLoC, Firebase, REST APIs, and modern architecture patterns.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+<h2 class="title">Skills</h2>
+
+<div class="skills-grid">
+<div class="skill-card"><i class="fas fa-mobile"></i> Flutter</div>
+<div class="skill-card"><i class="fas fa-code"></i> Dart</div>
+<div class="skill-card"><i class="fas fa-fire"></i> Firebase</div>
+<div class="skill-card"><i class="fas fa-database"></i> APIs</div>
+<div class="skill-card"><i class="fas fa-layer-group"></i> BLoC / Cubit</div>
+<div class="skill-card"><i class="fab fa-github"></i> GitHub</div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-<h2>Projects</h2>
+<section id="projects" class="section">
+<h2 class="title">Projects</h2>
 
-<div class="grid">
+<div class="projects-grid">
 
-<div class="card">
-<img src="images/project1.jpg">
-<h3>Sales Dashboard</h3>
-<p>Power BI dashboard for sales analysis.</p>
+<!-- Project 1 -->
+<div class="project-card">
+<img src="images/first.jpg" alt="project">
+<h3>Fruit Hub App</h3>
+<p>E-commerce Flutter app with authentication & payments.</p>
 
-<div class="card-buttons">
-<a href="https://github.com/yourrepo" target="_blank" class="github">GitHub</a>
-<a href="https://www.linkedin.com/" target="_blank" class="linkedin">LinkedIn Video</a>
+<div class="links">
+<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 </div>
 
-<div class="card">
-<img src="images/project2.jpg">
-<h3>Customer Analysis</h3>
-<p>Customer segmentation using Python.</p>
+<!-- Project 2 -->
+<div class="project-card">
+<img src="images/second.jpg" alt="project">
+<h3>Football App</h3>
+<p>Live football stats & news application.</p>
 
-<div class="card-buttons">
-<a href="https://github.com/yourrepo" target="_blank" class="github">GitHub</a>
-<a href="https://www.linkedin.com/" target="_blank" class="linkedin">LinkedIn Video</a>
+<div class="links">
+<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+</div>
+
+<!-- Project 3 -->
+<div class="project-card">
+<img src="images/third.jpg" alt="project">
+<h3>Movie App</h3>
+<p>Movies browsing app with trailers and reviews.</p>
+
+<div class="links">
+<a href="YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+<a href="YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 </div>
 
@@ -67,11 +135,31 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: example@email.com</p>
+<section id="contact" class="section">
+<h2 class="title">Contact Me</h2>
+
+<div class="contact-container">
+<form id="contact-form">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn primary">Send Message</button>
+</form>
+
+<div class="contact-info">
+<p><i class="fas fa-envelope"></i> madkourmohamed88@gmail.com</p>
+<p><i class="fab fa-linkedin"></i> LinkedIn</p>
+<p><i class="fab fa-github"></i> GitHub</p>
+</div>
+</div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Mohamed Madkour | All Rights Reserved</p>
+</footer>
+
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
