@@ -12,9 +12,8 @@ behavior: 'smooth'
 });
 
 
-// SESSION STORAGE (مرة واحدة فقط)
+// SESSION (welcome message once per tab)
 if (!sessionStorage.getItem("visited")) {
 alert("Welcome to my Data Analyst Portfolio 🚀");
-
 sessionStorage.setItem("visited", "true");
 }
