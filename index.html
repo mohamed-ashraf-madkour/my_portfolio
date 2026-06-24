@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed_Madkour_Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-text">MADKOUR</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="gradient-text">Mohamed Madkour</span>
+                        </h1>
+                        <h2 class="hero-subtitle">Data Analyst</h2>
+                        <p class="hero-description">
+                            Aspiring Data Analyst with strong skills in Excel, SQL, Python and Power BI. Experienced
+                           in data cleaning, analysis, and visualization to generate actionable insights and support decision
+                           making. Passionate about transforming raw data into clear reports and dashboards.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-container">
+                            <div class="profile-image">
+                                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+                                <div class="profile-ring"></div>
+                                <div class="profile-ring-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <a href="#about" class="scroll-arrow"></a>
+                </div>
+            </div>
+        </section>
+
+       <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Turning data into insights and decisions</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-description">
+                    I am a Data Analyst passionate about transforming raw data into meaningful insights that support better business decisions.  
+                    I work with tools like Excel, SQL, Python, and Power BI to analyze datasets, clean data, and build interactive dashboards.  
+                    My focus is always on accuracy, clarity, and delivering insights that actually matter.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <div class="about-profile">
+                    <img src="profile.jpg" alt="About Me" class="about-img">
+                    <div class="about-decoration"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">Years Learning</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-target="8">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">Certifications</div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">My data analysis and visualization toolkit</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Data Analysis -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Analysis</h3>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Python (Pandas, NumPy)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Data Cleaning</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Exploratory Data Analysis</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Data Visualization</h3>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Power BI</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Excel (Dashboards & Pivot Tables)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Matplotlib</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Seaborn</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Databases -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Tools & Databases</h3>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">PostgreSQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Excel Advanced Functions</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-name">Data Storytelling</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+       <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Data analysis and visualization projects showcasing insights and business impact</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="overview.png" alt="Remote Working Analysis Dashboard" class="project-img">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">Remote Working Analysis Dashboard</h3>
+                    <p class="project-description">
+                        Built a Power BI dashboard to analyze remote work trends, employee preferences, and productivity.
+                        Performed data cleaning and transformation using Excel and Power Query.
+                        Developed KPI-driven insights on adoption rates, benefits, and key challenges of remote work.
+                        Analyzed differences across industries, job roles, and company sizes.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Power Query</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="book.png" alt="Book Insights Dashboard" class="project-img">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">Book Insights Dashboard</h3>
+                    <p class="project-description">
+                        Built a Power BI dashboard to analyze book ratings, genres, and publishing trends.
+                        Cleaned and transformed Goodreads dataset using Power Query.
+                        Identified top genres and reader rating patterns.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Power Query</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="healthcare.png" alt="Healthcare Analysis Dashboard" class="project-img">
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">Healthcare Analysis Dashboard</h3>
+                    <p class="project-description">
+                        Analyzed patient satisfaction data across hospitals in the US using Power BI.
+                        Evaluated Top Box vs Bottom Box trends and regional performance.
+                        Identified key healthcare measures and improvement patterns.
+                    </p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Healthcare Analytics</span>
+                        <span class="tech-tag">KPIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">I'm always open to discussing new opportunities and collaborations</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:madkourmohamed88@gmail.com" class="cc">My Email</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/mohamed-madkour88/" class="cc">My LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/mohamed-ashraf-madkour" class="cc">My Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="from_email" name="from_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mohamed Madkour. All rights reserved.</p>
+                <div class="social-links">
+                    <!-- <a href="mailto:hippo5.elhabian@gmail.com" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fas fa-envelope"></i></a> -->
+                    <a href="https://www.linkedin.com/in/mohamed-madkour88/" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mohamed-ashraf-madkour" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/201286884837" class="social-link" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
